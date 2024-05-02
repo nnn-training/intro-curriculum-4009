@@ -6,10 +6,10 @@
     "start": "NODE_ENV=\"development\" node --env-file .env --watch src/app.js"
   },
   "dependencies": {
-    "@hono/node-server": "^1.8.2",
+    "@hono/node-server": "1.11.0",
     "@hono/oauth-providers": "0.3.1",
     "damage-calc": "https://github.com/nnn-training/damage-calc-4006.git",
-    "hono": "^4.0.10",
+    "hono": "4.2.7",
     "iron-session": "8.0.1",
     "jquery": "3.7.1",
     "socket.io": "4.7.5",

@@ -15,7 +15,7 @@ const layout = require("./layout");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const photosRouter = require("./routes/photos");
-const serverStatusRouter = require('./routes/server-status');
+const serverStatusRouter = require("./routes/server-status");
 
 const app = new Hono();
 
