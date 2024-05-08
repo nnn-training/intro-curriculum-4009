@@ -8,7 +8,8 @@ const { secureHeaders } = require("hono/secure-headers");
 const { env } = require("hono/adapter");
 const { serve } = require("@hono/node-server");
 const { serveStatic } = require("@hono/node-server/serve-static");
-const { githubAuth } = require("@hono/oauth-providers/github");
+const { trimTrailingSlash } = require("hono/trailing-slash")
+const { githubAuth } = require("@hono/oauth-providers/github"); = require("@hono/oauth-providers/github");
 const { getIronSession } = require("iron-session");
 const layout = require("./layout");
 
