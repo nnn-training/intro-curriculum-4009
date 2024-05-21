@@ -15262,9 +15262,15 @@ movingButton.on("click", function () {
 });
 var loadavg = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#loadavg");
 
-var socket = (0,socket_io_client__WEBPACK_IMPORTED_MODULE_1__["default"])('http://localhost:3000');
-socket.on('server-status', function (data) {
+var socket = (0,socket_io_client__WEBPACK_IMPORTED_MODULE_1__["default"])("http://localhost:3000");
+socket.on("server-status", function (data) {
   loadavg.text(data.loadavg.toString());
+});
+socket.on("connect", function () {
+  console.log("接続しました");
+});
+socket.on("disconnect", function () {
+  console.log("切断しました");
 });
 })();
 
