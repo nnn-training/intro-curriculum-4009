@@ -22,3 +22,15 @@ const socket = io('http://localhost:8000');
 socket.on('server-status', (data) => {
   loadavg.text(data.loadavg.toString());
 });
+
+
+/* クライアント側のコンソールに、接続、切断を知らせるメッセージを表示 */
+/* 以下のメッセージが表示されるのはクライアント側なので、ブラウザのデベロッパーツールで確認する */
+
+socket.on('connect', () => {
+  console.log('接続しました');
+});
+
+socket.on('disconnect', () => {
+  console.log('切断しました');
+});
