@@ -22,3 +22,11 @@ const socket = io("http://localhost:3000");
 socket.on("server-status", (data) => {
   loadavg.text(data.loadavg.toString());
 });
+
+socket.on('connect', (d) => {
+  console.log('接続しました');
+});
+
+socket.on('disconnect', (d) => {
+  console.log('切断しました');
+});
